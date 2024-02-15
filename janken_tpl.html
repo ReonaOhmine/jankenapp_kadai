@@ -6,131 +6,107 @@
     <meta name="viewport" content="width=device-width">
     <script src="js/jquery-2.1.3.min.js"></script>
     <link rel="stylesheet" href="css/sample.css">
-    <title>じゃんけん</title>
+    <title>じゃんけんアプリ</title>
 </head>
 
 <body>
 
     <header>
-        <h1>じゃんけん</h1>
+        <h1>じゃんけんしよう！</h1>
     </header>
 
     <main>
+        <div class="centeryose">何を出す？</div>
         <ul>
-            <li id="gu_btn">グー</li>
-            <li id="cho_btn">チョキ</li>
-            <li id="par_btn">パー</li>
+            <li id="gu_btn" class="centeryose">グー</li>
+            <li id="cho_btn" class="centeryose">チョキ</li>
+            <li id="par_btn" class="centeryose">パー</li>
         </ul>
-        <div>コンピュータの出した手は？「<span id="pc_hands">なに？</span>」</div>
-        <div id="judgment">勝ち</div>
+        <div class="centeryose">コンピュータの出した手は「<span id="pc_hands">なに？</span>」</div>
+        <div class="centeryose">あなたの<br><span id="judgment" class="kekka">勝ち</span></div>
     </main>
 
     <footer></footer>
     <script>
-   $("#gu_btn").on("click",function(){
-    
-    // 1.乱数（1~3）
-    const r = Math.ceil( Math.random()*3 );
 
-    // 2.if分岐処理
-    let view = "";
-    if( r==1 ){
-        view = 'グー';
-        view2 = 'あいこ';
-    }
-    if( r==2 ){
-        view = 'チョキ';
-        view2 = '勝ち';
-    }
-    if( r==3 ){
-        view = 'パー';
-        view2 = '負け';
-    }
+        // グーを押した時
+        $("#gu_btn").on("click", function () {
 
-    // 3.表示処理
-    $("#pc_hands").text(view);
-    $("#judgment").text(view2);
-});
+            // 1.乱数（1~3）
+            const r = Math.ceil(Math.random() * 3);
 
-   
-$("#gu_btn").on("click",function(){
-    
-    // 1.乱数（1~3）
-    const r = Math.ceil( Math.random()*3 );
+            // 2.if分岐処理
+            let view = "";
+            if (r == 1) {
+                view = 'グー';
+                view2 = 'あいこ',fontSize=80;
+            }
+            if (r == 2) {
+                view = 'チョキ';
+                view2 = '勝ち';
+            }
+            if (r == 3) {
+                view = 'パー';
+                view2 = '負け';
+            }
 
-    // 2.if分岐処理
-    let view = "";
-    if( r==1 ){
-        view = 'グー';
-        view2 = 'あいこ';
-    }
-    if( r==2 ){
-        view = 'チョキ';
-        view2 = '勝ち';
-    }
-    if( r==3 ){
-        view = 'パー';
-        view2 = '負け';
-    }
+            // 3.表示処理
+            $("#pc_hands").text(view);
+            $("#judgment").text(view2);
+        });
 
-    // 3.表示処理
-    $("#pc_hands").text(view);
-    $("#judgment").text(view2);
-});
+        // チョキを出した時
+        $("#cho_btn").on("click", function () {
 
-$("#cho_btn").on("click",function(){
-    
-    // 1.乱数（1~3）
-    const r = Math.ceil( Math.random()*3 );
+            // 1.乱数（1~3）
+            const r = Math.ceil(Math.random() * 3);
 
-    // 2.if分岐処理
-    let view = "";
-    if( r==1 ){
-        view = 'グー';
-        view2 = '負け';
-    }
-    if( r==2 ){
-        view = 'チョキ';
-        view2 = 'あいこ';
-    }
-    if( r==3 ){
-        view = 'パー';
-        view2 = '勝ち';
-    }
+            // 2.if分岐処理
+            let view = "";
+            if (r == 1) {
+                view = 'グー';
+                view2 = '負け';
+            }
+            if (r == 2) {
+                view = 'チョキ';
+                view2 = 'あいこ';
+            }
+            if (r == 3) {
+                view = 'パー';
+                view2 = '勝ち';
+            }
 
-    // 3.表示処理
-    $("#pc_hands").text(view);
-    $("#judgment").text(view2);
-});
+            // 3.表示処理
+            $("#pc_hands").text(view);
+            $("#judgment").text(view2);
+        });
 
-$("#par_btn").on("click",function(){
-    
-    // 1.乱数（1~3）
-    const r = Math.ceil( Math.random()*3 );
+        // パーを出した時
+        $("#par_btn").on("click", function () {
 
-    // 2.if分岐処理
-    let view = "";
-    if( r==1 ){
-        view = 'グー';
-        view2 = '勝ち';
-    }
-    if( r==2 ){
-        view = 'チョキ';
-        view2 = '負け';
-    }
-    if( r==3 ){
-        view = 'パー';
-        view2 = 'あいこ';
-    }
+            // 1.乱数（1~3）
+            const r = Math.ceil(Math.random() * 3);
 
-    // 3.表示処理
-    $("#pc_hands").text(view);
-    $("#judgment").text(view2);
-});
+            // 2.if分岐処理
+            let view = "";
+            if (r == 1) {
+                view = 'グー';
+                view2 = '勝ち';
+            }
+            if (r == 2) {
+                view = 'チョキ';
+                view2 = '負け';
+            }
+            if (r == 3) {
+                view = 'パー';
+                view2 = 'あいこ';
+            }
 
+            // 3.表示処理
+            $("#pc_hands").text(view);
+            $("#judgment").text(view2);
+        });
 
-
-   
     </script>
 </body>
 

@@ -12,6 +12,14 @@ header{
 main{
     border-bottom:1px solid #ccc;
 }
+.centeryose {
+    text-align: center;
+}
+.kekka {
+    font-size: 80px;
+    font-weight: 200;
+}
+
 footer{
     background-color: #fff;
     border-bottom:1px solid #ccc;
