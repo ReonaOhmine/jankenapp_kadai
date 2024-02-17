@@ -23,8 +23,11 @@
             <li id="par_btn" class="centeryose">パー</li>
         </ul>
         <div class="centeryose">コンピュータの出した手は「<span id="pc_hands"></span>」</div>
-        <div class="centeryose">結果は・・・<br><span id="kekka"></span></div>
+        <div class="centeryose">結果は・・・<br><span id="kekka" class="kekkaclass"></span></div>
+        <button onclick="location.reload();" class="onemorebtn">もう一回！</button>
+        
     </main>
+
 
     <footer></footer>
     <script>
@@ -39,7 +42,7 @@
             let view = "";
             if (r == 1) {
                 view = 'グー';
-                view2 = 'あいこ',fontSize=80;
+                view2 = 'あいこ' 
             }
             if (r == 2) {
                 view = 'チョキ';
@@ -53,8 +56,31 @@
             // 3.表示処理
             $("#pc_hands").text(view);
             $("#kekka").text(view2);
-        });
+            csshenkou(view2);
+             
+            });
+            function csshenkou(view2) {
+                // ①CSSの適用をキャンセルする指示を出す (remove　class)
+                // $('#kekka').removeClass('#kekka')
+                
+                // ②新しいCSSを適用する指示を出す  (add　class)
+                if (view2 == '勝ち') {
+                    $('#kekka').addClass('kachi')
+                }
+    
+                if (view2 == '負け') {
+                     $('#kekka').addClass('make')
+                }
+    
+                 if (view2 == 'あいこ') {
+                     $('#kekka').addClass('aiko')
+                }
+    
+                $('#kekka').removeClass('#kekka');
+                // クリックするたびに初期化する指示をする
+            }
 
+            
         // チョキを出した時
         $("#cho_btn").on("click", function () {
 
@@ -79,7 +105,31 @@
             // 3.表示処理
             $("#pc_hands").text(view);
             $("#kekka").text(view2);
-        });
+            csshenkou(view2);
+             
+            });
+            function csshenkou(view2) {
+                // ①CSSの適用をキャンセルする指示を出す (remove　class)
+                // $('#kekka').removeClass('#kekka')
+                
+                // ②新しいCSSを適用する指示を出す  (add　class)
+                if (view2 == '勝ち') {
+                    $('#kekka').addClass('kachi')
+                }
+    
+                if (view2 == '負け') {
+                     $('#kekka').addClass('make')
+                }
+    
+                 if (view2 == 'あいこ') {
+                     $('#kekka').addClass('aiko')
+                }
+    
+                $('#kekka').removeClass('#kekka');
+                // クリックするたびに初期化する指示をする
+            }
+    
+            
 
         // パーを出した時
         $("#par_btn").on("click", function () {
@@ -104,9 +154,32 @@
 
             // 3.表示処理
             $("#pc_hands").text(view);
-            $("#kekka").text(view2);
+            $("#kekka").text(view2); 
+            csshenkou(view2);
+             
         });
+        function csshenkou(view2) {
+            // ①CSSの適用をキャンセルする指示を出す (remove　class)
+            // $('#kekka').removeClass('#kekka')
+            
+            // ②新しいCSSを適用する指示を出す  (add　class)
+            if (view2 == '勝ち') {
+                $('#kekka').addClass('kachi')
+            }
 
+            if (view2 == '負け') {
+                 $('#kekka').addClass('make')
+            }
+
+             if (view2 == 'あいこ') {
+                 $('#kekka').addClass('aiko')
+            }
+
+            $('#kekka').removeClass('#kekka');
+            // クリックするたびに初期化する指示をする
+            // →未設定・・・
+        }
+ 
     </script>
 </body>
 

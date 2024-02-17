@@ -13,6 +13,8 @@ main{
     margin-top: 30px;
     border-bottom:1px solid #ccc;
 }
+
+
 .centeryose {
     text-align: center;
 }
@@ -20,6 +22,20 @@ main{
     font-size: 80px;
     font-weight: 200;
 }
+
+
+.make {
+    color: red;
+}
+
+.kachi {
+    color: blue;
+}
+
+.aiko {
+    color: #666 ;
+}
+
 
 footer{
     background-color: #fff;
@@ -56,4 +72,16 @@ li{
 #par_btn:hover{
     background: red;
     color:#fff;
+}
+
+.onemorebtn {
+    background:gold;
+    border:black 1px solid;
+    text-decoration:none;
+    color:black;
+    font-size: 20px;
+    font-family:sans-serif;
+    display:block;
+    width:150px;
+    margin:0 auto;
 }
