@@ -1,7 +1,7 @@
 body{
     margin:0;
     padding:0;
-    text-align:left;
+    /* text-align:left; */
     font-size: 32px;
 }
 header{
@@ -10,6 +10,7 @@ header{
     text-align: center;
 }
 main{
+    margin-top: 30px;
     border-bottom:1px solid #ccc;
 }
 .centeryose {
@@ -45,7 +46,14 @@ li{
     display:table-cell;  /* 定義 */
     cursor: pointer;
 }
-li:hover{
+#gu_btn:hover{
     background: #0066CC;
+    color:#fff;
+}
+#cho_btn:hover{
+    background: yellow;
+}
+#par_btn:hover{
+    background: red;
     color:#fff;
 }
